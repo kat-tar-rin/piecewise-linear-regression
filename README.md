@@ -5,7 +5,8 @@
 
 **Piecewise Linear Regression**
 
-Piecewise Linear Regression (also called segmented regression or broken-stick regression) is a modeling technique used when a single straight line cannot fully describe the relationship between variables. Instead of fitting just one regression line to all of the data, the dataset is divided into segments, and a separate linear regression model is fitted to each segment. This allows the regression line to “bend” at specific points, called breakpoints.
+Piecewise linear regression (also called segmented regression, or broken-stick regression) is a modeling technique used when a single straight line cannot fully describe the relationship between variables. Instead of fitting just one regression line to all of the data, the dataset is divided into segments, and a separate linear regression model is fitted to each segment. This allows the regression line to “bend” at specific points, called breakpoints.
+When there is only one breakpoint, this special case is called bilinear regression.
 
 ***How it works***
 
@@ -16,13 +17,13 @@ Piecewise Linear Regression (also called segmented regression or broken-stick re
 - Analyzes how the relationship between variables shifts across different segments, e.g., comparing growth rates before and after a policy intervention.
 
 *Visualizing segmented trends*
-- Generates plots where regression lines change slope at identified breakpoints, making patterns in the data easier to interpret and communicate.
+- Generates plots where regression lines change slope at identified breakpoints, making patterns in the data easier to interpret.
 
 
 ## Features
 
 - Automated breakpoint detection using `pwlf` (Piecewise Linear Fit)
-- Segment-specific linear regression models
+- Two-segment linear regression models
 - R² and slope reporting per segment
 - Statistical significance test for slope difference via interaction terms
 - Plotting data, regression lines, and breakpoints
@@ -32,6 +33,15 @@ Piecewise Linear Regression (also called segmented regression or broken-stick re
 
 - The dataset must be in `.sav` format (SPSS)
 - Ensure that column names in the `variable_pairs` list match the actual column names in your dataset
+
+
+## Dependencies
+
+- The script requires the following Python packages:
+
+```bash
+pip install pwlf pyreadstat matplotlib scikit-learn statsmodels 
+```
 
 
 ## Example Output
@@ -45,19 +55,12 @@ Piecewise Linear Regression (also called segmented regression or broken-stick re
   - Green dashed line marking the breakpoint
 
 
-## Dependencies
-
-- The script requires the following Python packages:
-
-```bash
-pip install pwlf pyreadstat matplotlib scikit-learn statsmodels 
-```
-
 ## Notes
 
 - All variable and file names in the code are generic
 
-## Code
+
+## Step by Step Code
 
 - STEP 1: Install dependencies 
 
