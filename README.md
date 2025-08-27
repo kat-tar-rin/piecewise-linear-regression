@@ -1,4 +1,4 @@
-# Piecewise Linear Regression (Python | Colab)
+# Piecewise Linear Regression / Bilinear Regression (Python | Colab)
 
 
 ## Overview
